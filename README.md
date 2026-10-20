@@ -1,5 +1,7 @@
 # Collaborative PostGIS infrastructure for CARG geological field mapping
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23496137.svg)](https://doi.org/10.5281/zenodo.23496137)
+
 Open-source system for **multi-operator geological field surveying** within the
 Italian CARG project (*CARtografia Geologica*, national 1:50,000 Geological Map of
 Italy). Instead of one GeoPackage per surveyor merged at the end of the campaign,
@@ -202,7 +204,14 @@ This is a research prototype (see the article, Tab. 5.3):
 
 ## Licence and citation
 
-Code: [MIT](LICENSE). Please cite the article above and this repository
-(see [`CITATION.cff`](CITATION.cff)).
+Code: [MIT](LICENSE). Please cite the article above and this software:
+
+> Stori L. (2026) — *carg-collaborative-gis: Collaborative PostGIS infrastructure
+> for CARG geological field mapping*, v1.0.0 [software]. Zenodo.
+> https://doi.org/10.5281/zenodo.23496138
+
+The DOI above identifies version 1.0.0, the version described in the article;
+https://doi.org/10.5281/zenodo.23496137 always resolves to the latest version.
+See also [`CITATION.cff`](CITATION.cff).
 
 Basemap in the WebGIS and QGIS project: © OpenStreetMap contributors.

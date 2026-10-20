@@ -13,6 +13,14 @@ authors:
 version: 1.0.0
 date-released: 2026-10-20
 license: MIT
+doi: 10.5281/zenodo.23496137
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23496137
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: 10.5281/zenodo.23496138
+    description: "Version 1.0.0 (described in the article)"
 repository-code: "https://github.com/geomapping-lab/carg-collaborative-gis"
 keywords:
   - geological mapping
