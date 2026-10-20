@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebGIS CARG</title>
+</head>
+<body>
+
+  <!-- ======================================================
+       Vista Login
+       ====================================================== -->
+  <div id="view-login">
+    <div class="login-card">
+      <h1>WebGIS CARG</h1>
+      <p class="login-subtitle">Accesso riservato al team di rilevamento</p>
+      <div id="login-error" class="error-msg" style="display:none"></div>
+      <input type="text"     id="login-username" placeholder="Username" autocomplete="username" />
+      <input type="password" id="login-password" placeholder="Password" autocomplete="current-password" />
+      <button id="login-btn">Accedi</button>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       Vista Mappa
+       ====================================================== -->
+  <div id="view-map" style="display:none">
+
+    <!-- Header -->
+    <div id="map-header">
+      <span id="header-title">WebGIS CARG</span>
+      <div id="header-right">
+        <span id="header-user"></span>
+        <button id="logout-btn">Esci</button>
+      </div>
+    </div>
+
+    <!-- Layout sidebar + mappa -->
+    <div id="map-layout">
+
+      <!-- Sidebar -->
+      <div id="sidebar">
+
+        <div class="sidebar-section">
+          <h3>Layer</h3>
+          <label class="layer-toggle">
+          <input type="checkbox" data-layer="affioranti" checked />
+          <span class="layer-dot dot-square" style="background:#5a8a30"></span>
+          Affioranti
+        </label>
+        <label class="layer-toggle">
+          <input type="checkbox" data-layer="giaciture" checked />
+          <span class="layer-dot dot-circle" style="background:#1565c0"></span>
+          Giaciture
+        </label>
+        <label class="layer-toggle">
+          <input type="checkbox" data-layer="campioni" checked />
+          <span class="layer-dot dot-circle" style="background:#e65100"></span>
+          Campioni
+        </label>
+        <label class="layer-toggle">
+          <input type="checkbox" data-layer="linee_substrato" checked />
+          <span class="layer-dot dot-line" style="background:#c62828"></span>
+          Linee substrato
+        </label>
+        <label class="layer-toggle">
+          <input type="checkbox" data-layer="linee_geomorfologia" checked />
+          <span class="layer-dot dot-line" style="background:#2e7d32"></span>
+          Linee geomorfologia
+        </label>
+        <label class="layer-toggle">
+          <input type="checkbox" data-layer="note" checked />
+          <span class="layer-dot dot-circle" style="background:#7b1fa2"></span>
+          Note
+        </label>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Filtri</h3>
+
+          <label class="filter-label">Rilevatore</label>
+          <select id="filter-rilevatore">
+            <option value="">Tutti</option>
+          </select>
+
+          <label class="filter-label">Formazione (affioranti)</label>
+          <select id="filter-sigla">
+            <option value="">Tutte</option>
+          </select>
+
+          <label class="filter-label">Data da</label>
+          <input type="date" id="filter-data-da" />
+
+          <label class="filter-label">Data a</label>
+          <input type="date" id="filter-data-a" />
+
+          <label class="layer-toggle" style="margin-top:8px">
+            <input type="checkbox" id="filter-tutti" />
+            Mostra anche scartati
+          </label>
+
+          <button id="apply-filters-btn">Applica filtri</button>
+          <button id="reset-filters-btn">Reset filtri</button>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Annotazioni</h3>
+          <button id="add-note-btn">+ Aggiungi nota</button>
+          <p id="note-hint" class="hint-text" style="display:none">
+            Clicca sulla mappa per posizionare la nota
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Mappa OpenLayers -->
+      <div id="map"></div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================
+       Modal nuova annotazione
+       ====================================================== -->
+  <div id="modal-nota" style="display:none">
+    <div class="modal-card">
+      <h3>Nuova annotazione</h3>
+      <textarea id="nota-testo" placeholder="Scrivi la nota..."></textarea>
+      <div class="modal-buttons">
+        <button id="nota-salva-btn">Salva</button>
+        <button id="nota-annulla-btn" class="btn-secondary">Annulla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       Popup feature (gestito da OpenLayers Overlay)
+       ====================================================== -->
+  <div id="popup" class="ol-popup">
+    <button id="popup-close">×</button>
+    <div id="popup-content"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Collaborative PostGIS infrastructure for CARG geological field mapping"
+abstract: >-
+  Open-source system for multi-operator geological field surveying within the
+  Italian CARG project: PostgreSQL/PostGIS geodatabase with Row-Level Security
+  and automated audit trail, QGIS/QField offline data collection, and a
+  FastAPI/OpenLayers WebGIS for shared progress monitoring.
+authors:
+  - family-names: Stori
+    given-names: Lorenzo
+    affiliation: "DISTAV, University of Genova"
+version: 1.0.0
+date-released: 2026-10-19
+license: MIT
+repository-code: "https://github.com/geomapping-lab/carg-collaborative-gis"
+keywords:
+  - geological mapping
+  - CARG
+  - PostGIS
+  - Row-Level Security
+  - QField
+  - WebGIS

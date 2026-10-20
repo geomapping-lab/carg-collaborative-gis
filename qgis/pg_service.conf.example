@@ -1,0 +1,17 @@
+# PostgreSQL connection service used by the QGIS project template.
+# Each surveyor keeps their OWN credentials here, so that Row-Level
+# Security attributes every edit to the right database role.
+#
+# Location:
+#   Windows : %APPDATA%\postgresql\.pg_service.conf
+#             (or set the PGSERVICEFILE environment variable)
+#   Linux/macOS : ~/.pg_service.conf
+# Alternatively QGIS can store the user/password in its authentication
+# database (Settings ▸ Options ▸ Authentication) — never in the project.
+
+[carg]
+host=your-server-address
+port=5432
+dbname=progetto_rilevamento
+user=ril_user1
+password=your-password
