@@ -206,7 +206,7 @@ This is a research prototype (see the article, Tab. 5.3):
 
 Code: [MIT](LICENSE). Please cite the article above and this software:
 
-> Stori L. (2026) — *carg-collaborative-gis: Collaborative PostGIS infrastructure
+> Stori L. (2026) — *Collaborative PostGIS infrastructure
 > for CARG geological field mapping*, v1.0.0 [software]. Zenodo.
 > https://doi.org/10.5281/zenodo.23496138
 
